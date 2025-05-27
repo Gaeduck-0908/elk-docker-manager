@@ -18,7 +18,7 @@ A simple Bash-based CLI tool to manage your ELK Stack (Elasticsearch, Logstash, 
 
 ```bash
 chmod +x elk-manager.sh
-./elk-manager.sh
+sudo ./elk-manager.sh
 ```
 
 You will see a menu like this:
