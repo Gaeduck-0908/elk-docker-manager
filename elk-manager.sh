@@ -29,10 +29,12 @@ function init_setting() {
 }
 
 function start_docker() {
-    echo "🚀 Starting ELK stack containers..."
-    docker-compose -f $COMPOSE_FILE up -d
+    ELASTIC_PASSWORD="qwer1234"
+    echo "🚀 Starting ELK stack containers with default password: $ELASTIC_PASSWORD"
+    ELASTIC_PASSWORD="$ELASTIC_PASSWORD" docker-compose -f $COMPOSE_FILE up -d
     echo "✅ ELK stack started."
 }
+
 
 function stop_docker() {
     echo "🛑 Stopping ELK stack containers..."
